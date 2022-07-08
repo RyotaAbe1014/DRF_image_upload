@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import ProfileCreateAPIView
+from .views import ProfileCreateAPIView, FileCreateAPIView
 
 urlpatterns = [
     path('image/', ProfileCreateAPIView.as_view(), name="create_profile"),
+    path('file/', FileCreateAPIView.as_view(), name="create_file"),
 ]
 
